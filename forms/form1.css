@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 20px;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #333;
+}
+
+.form-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    color: #222;
+}
+
+.subtitle {
+    margin: 28px 0 52px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: 1;
+    gap: 28px 28px;
+    align-items: baseline;
+}
+
+.contact-form label {
+    font-size: 16px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.required {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.contact-form input {
+    height: 45px;
+}
+
+.contact-form textarea {
+    min-height: 145px;
+    resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2196f3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.contact-form button {
+    grid-column: 2;
+    justify-self: start;
+
+    margin-left: 0;
+    margin-top: 0;
+
+    padding: 14px 32px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: #168ddd;
+    color: white;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+
+.contact-form button:hover {
+    background: #087cc7;
+}
+
+.hint {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.hint span {
+    color: #c0392b;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        margin: 20px 0 35px;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .contact-form label {
+        text-align: left;
+        white-space: normal;
+        margin-top: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        margin-bottom: 8px;
+    }
+
+    .contact-form button {
+        grid-column: 1;
+        justify-self: stretch;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .hint {
+        line-height: 1.5;
+    }
+}
