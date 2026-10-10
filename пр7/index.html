@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htgfd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1>Практическая работа</h1>
+
+        <section class="task">
+            <h2>1. Создание «хлебных крошек»</h2>
+
+            <ol class="breadcrumb">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Категория</a></li>
+                <li><span>Продукт</span></li>
+            </ol>
+        </section>
+
+        <section class="task">
+            <h2>2. Создание стилизованного чекбокса</h2>
+
+            <form class="checkbox-form">
+                <label class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <span>Чекбокс1</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <span>Чекбокс2</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <span>Чекбокс3</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <span>Чекбокс4</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <span>Чекбокс5</span>
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" checked>
+                    <span>Чекбокс6</span>
+                </label>
+            </form>
+        </section>
+
+        <div class="run-rotate"></div>
+
+            <div class="progress">
+                <div class="progress-bar" id="bar"></div>
+                <div class="percent" id="percent">0%</div>
+            </div>
+
+            <script>
+                let value = 0;
+                const bar = document.getElementById('bar');
+                const percent = document.getElementById('percent');
+
+                function step() {
+                    value = value + 1;          // шаг 10%
+                    if (value > 100) value = 0;  // после 100% начинаем заново
+
+                    bar.style.width = value + '%';
+                    percent.textContent = value + '%';
+                }
+
+                // каждую секунду +10%
+                setInterval(step, 1000);
+            </script>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

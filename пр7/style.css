@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 35px;
+    font-size: 30px;
+}
+
+.task {
+    margin-bottom: 45px;
+}
+
+.task h2 {
+    margin: 0 0 20px;
+    font-size: 25px;
+}
+
+/* =========================
+   ЗАДАНИЕ 1. ХЛЕБНЫЕ КРОШКИ
+   ========================= */
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 15px 20px;
+    background: #f0f1f3;
+    border-radius: 2px;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb a {
+    color: #0b56ea;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.breadcrumb span {
+    color: #333;
+    font-size: 20px;
+}
+
+/* Стрелка создаётся именно псевдоэлементом ::after.
+   Для последнего элемента стрелка не создаётся. */
+.breadcrumb li:not(:last-child)::after {
+    content: ">";
+    margin: 0 14px;
+    color: #333;
+    font-size: 20px;
+}
+
+
+/* =========================
+   ЗАДАНИЕ 2. ЧЕКБОКСЫ
+   ========================= */
+
+.checkbox-form {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 70px;
+    row-gap: 15px;
+    padding: 25px;
+    border: 1px solid #eee;
+}
+
+.checkbox-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+}
+
+/* Настоящий checkbox остаётся функциональным,
+   но его стандартный внешний вид убирается. */
+.checkbox-item input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Сам квадрат создаётся псевдоэлементом ::before. */
+.checkbox-item span {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding-left: 62px;
+}
+
+.checkbox-item span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    border: 2px solid #6d8fa3;
+    border-radius: 8px;
+    background: #fff;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Галочка создаётся псевдоэлементом ::after. */
+.checkbox-item span::after {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    width: 22px;
+    height: 12px;
+    border-left: 3px solid #557b91;
+    border-bottom: 3px solid #557b91;
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Показываем галочку при :checked. */
+.checkbox-item input:checked + span::after {
+    opacity: 1;
+}
+
+/* Дополнительный эффект при наведении. */
+.checkbox-item:hover span::before {
+    border-color: #0b56ea;
+}
+
+.checkbox-item input:focus-visible + span::before {
+    outline: 3px solid rgba(11, 86, 234, 0.2);
+    outline-offset: 2px;
+}
+
+
+/* =========================
+   ЗАДАНИЕ 3. ПРОГРЕСС
+   ========================= */
+
+.progress-box {
+    width: 100%;
+    min-height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: #35b44a;
+}
+
+.progress {
+    position: relative;
+    width: min(310px, 100%);
+    height: 25px;
+    border: 2px solid #aaa;
+    border-radius: 3px;
+    background: #ddd;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.progress {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 40px;
+    background-color: #01441d;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #04dd5f;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+.percent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   АДАПТИВНОСТЬ
+   ========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .task h2 {
+        font-size: 21px;
+    }
+
+    .breadcrumb {
+        padding: 12px;
+    }
+
+    .breadcrumb a,
+    .breadcrumb span {
+        font-size: 17px;
+    }
+
+    .breadcrumb li:not(:last-child)::after {
+        margin: 0 8px;
+        font-size: 17px;
+    }
+
+    .checkbox-form {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 18px;
+    }
+
+    .progress-box {
+        min-height: 180px;
+        padding: 20px;
+    }
+}

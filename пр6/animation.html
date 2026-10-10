@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+
+    <div class="run-rotate"></div>
+
+    <!-- Индикатор выполнения -->
+    <div class="progress">
+        <div class="progress-bar" id="bar"></div>
+        <div class="percent" id="percent">0%</div>
+    </div>
+
+    <script>
+        let value = 0;
+        const bar = document.getElementById('bar');
+        const percent = document.getElementById('percent');
+
+        function step() {
+            value = value + 10;          // шаг 10%
+            if (value > 100) value = 0;  // после 100% начинаем заново
+
+            bar.style.width = value + '%';
+            percent.textContent = value + '%';
+        }
+
+        // каждую секунду +10%
+        setInterval(step, 1000);
+    </script>
+
+</body>
+</html>

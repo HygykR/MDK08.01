@@ -1,0 +1,12 @@
+.link{
+    background-color: blueviolet;
+    padding: 20px;
+    width: 100px;
+    transition-property: background-color;
+    transition-duration: 0.5s;transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: 0.2s;
+}
+
+.link:hover{
+    background-color: bisque;
+}

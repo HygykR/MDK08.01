@@ -1,0 +1,9 @@
+.show{
+    height: 600px;
+    background: linear-gradient(to right, #f7aa77 20%, #f7aaff 40%, #f7aa77 60%, #f7aaff 80%);
+}
+
+.show-radial{
+    height: 600px;
+    background: radial-gradient(at top right, #f7aa77 20%, #f7aaff 40%, #f7aa77 60%, #f7aaff 80%);
+}

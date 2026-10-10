@@ -1,0 +1,71 @@
+.run-rotate{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    animation: run 5s infinite;
+}
+
+@keyframes run {
+    0%{
+        left: 0;
+        margin-top: 0;
+        background-color: red;
+    }
+    25%{
+        left: calc(100vw - 100px);
+        margin-top: 0;
+    }
+    50%{
+        left: calc(100vw - 100px);
+        margin-top: calc(100vh - 100px);
+        background-color: blue;
+    }
+    75%{
+        left: 0;
+        margin-top: calc(100vh - 100px);
+        background-color: black;
+    }
+    100%{
+        left: 0;
+        margin-top: 0;
+        background-color: red;
+    }
+}
+
+/* ---------- Индикатор выполнения ---------- */
+
+.progress {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 40px;
+    background-color: #1e6e3f;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #7ee2a8;
+    border-radius: 20px;
+    transition: width 0.3s;
+}
+
+.percent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
