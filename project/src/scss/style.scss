@@ -1,0 +1,38 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+$enable-transitions: false;
+$enable-gradients: false;
+
+$primary: #00bfc5;
+$secondary: #b3ff00;
+$dark: #a00193;
+
+$body-bg: #ffffff;
+$body-color: #000000;
+
+$link-color: #000000;
+$link-hover-color: #000000;
+
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+$headings-font-family: Georgia, "Times New Roman", serif;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.5rem;
+
+$border-width: 2px;
+$border-color: #b3ff00;
+
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
+
+$card-border-width: 2px;
+$card-border-color: #b3ff00;
+
+$input-border-width: 2px;
+$input-border-color: #b3ff00;
+
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables-dark";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/bootstrap";

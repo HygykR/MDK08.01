@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Связаться с нами</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="page">
+
+    <section class="contact-card">
+
+        <!-- Левая часть -->
+        <div class="slider">
+
+    <div class="slide active">
+
+        <img
+            src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=1200&q=85"
+            alt=""
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+            <span class="slide-number">01 / 04</span>
+
+            <h2 class="animated-title">
+                Создаём
+                <strong>цифровые продукты.</strong>
+            </h2>
+
+            <p class="animated-text">
+                От первой идеи до готового интерфейса,
+                которым действительно хочется пользоваться.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="slide">
+
+        <img
+            src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=85"
+            alt=""
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+            <span class="slide-number">02 / 04</span>
+
+            <h2 class="animated-title">
+                Есть идея?
+                <strong>Начнём с неё.</strong>
+            </h2>
+
+            <p class="animated-text">
+                Поможем превратить задумку в понятный
+                и удобный цифровой продукт.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="slide">
+
+        <img
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+            alt=""
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+            <span class="slide-number">03 / 04</span>
+
+            <h2 class="animated-title">
+                Работаем
+                <strong>вместе с вами.</strong>
+            </h2>
+
+            <p class="animated-text">
+                Погружаемся в задачу и двигаемся
+                к результату вместе с командой.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="slide">
+
+        <img
+            src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=85"
+            alt=""
+        >
+
+        <div class="slide-overlay"></div>
+
+        <div class="slide-content">
+            <span class="slide-number">04 / 04</span>
+
+            <h2 class="animated-title">
+                Дизайн,
+                <strong>который работает.</strong>
+            </h2>
+
+            <p class="animated-text">
+                Продумываем не только внешний вид,
+                но и удобство каждого элемента.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="slider-navigation">
+
+        <div class="slider-dots">
+
+            <button
+                class="dot active"
+                type="button"
+                aria-label="Первый слайд"
+            ></button>
+
+            <button
+                class="dot"
+                type="button"
+                aria-label="Второй слайд"
+            ></button>
+
+            <button
+                class="dot"
+                type="button"
+                aria-label="Третий слайд"
+            ></button>
+
+            <button
+                class="dot"
+                type="button"
+                aria-label="Четвёртый слайд"
+            ></button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+        <!-- Правая часть -->
+        <div class="form-container">
+
+            <div class="form-header">
+                <span class="form-label">
+                    ОБРАТНАЯ СВЯЗЬ
+                </span>
+
+                <h1>
+                    Напишите нам
+                </h1>
+
+                <p>
+                    Есть вопрос или интересный проект?
+                    Расскажите немного о нём.
+                </p>
+            </div>
+
+
+            <form class="form" id="contactForm">
+
+                <div class="form-row">
+
+                    <label for="name">
+                        Имя
+                        <span>*</span>
+                    </label>
+
+                    <div class="input-box">
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            placeholder="Иван Иванов"
+                            autocomplete="name"
+                            required
+                        >
+
+                        <span class="input-line"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label for="email">
+                        Электронная почта
+                        <span>*</span>
+                    </label>
+
+                    <div class="input-box">
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="hello@example.com"
+                            autocomplete="email"
+                            required
+                        >
+
+                        <span class="input-line"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label for="subject">
+                        Тема
+                    </label>
+
+                    <div class="input-box select-box">
+
+                        <select id="subject" name="subject">
+
+                            <option value="" selected disabled>
+                                Выберите тему
+                            </option>
+
+                            <option value="project">
+                                Новый проект
+                            </option>
+
+                            <option value="question">
+                                Вопрос
+                            </option>
+
+                            <option value="cooperation">
+                                Сотрудничество
+                            </option>
+
+                        </select>
+
+                        <span class="select-arrow">⌄</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row message-row">
+
+                    <label for="message">
+                        Сообщение
+                        <span>*</span>
+                    </label>
+
+                    <div class="input-box">
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Расскажите, что вы задумали..."
+                            maxlength="500"
+                            required
+                        ></textarea>
+
+                        <div class="textarea-info">
+                            <span>Расскажите подробнее</span>
+                            <span>
+                                <b id="counter">0</b>/500
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-footer">
+
+                    <p class="required">
+                        <span>*</span>
+                        Обязательные поля
+                    </p>
+
+                    <button
+                        class="submit-button"
+                        type="submit"
+                    >
+                        <span class="button-text">
+                            Отправить
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+                    </button>
+
+                </div>
+
+                <div class="success-message">
+                    Сообщение готово к отправке ✓
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+    /* ==========================================
+   ДЕЛАЕМ ИЗ ТЕКСТА ОТДЕЛЬНЫЕ БУКВЫ
+========================================== */
+
+function splitText(element) {
+
+    const text = element.textContent;
+
+    element.textContent = '';
+
+    const words = text.split(' ');
+
+    words.forEach((word, wordIndex) => {
+
+        const wordElement = document.createElement('span');
+
+        wordElement.style.whiteSpace = 'nowrap';
+
+        [...word].forEach(letter => {
+
+            const span = document.createElement('span');
+
+            span.className = 'letter';
+            span.textContent = letter;
+
+            wordElement.appendChild(span);
+
+        });
+
+        element.appendChild(wordElement);
+
+
+        if (wordIndex < words.length - 1) {
+            element.appendChild(
+                document.createTextNode(' ')
+            );
+        }
+
+    });
+}
+
+
+document
+    .querySelectorAll('.animated-title, .animated-text')
+    .forEach(element => {
+
+        splitText(element);
+
+    });
+
+    /* -------------------------
+       СЛАЙДЕР
+    ------------------------- */
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+
+    let currentSlide = 0;
+    let sliderTimer;
+
+
+    function showSlide(index) {
+
+        slides.forEach(slide => {
+            slide.classList.remove('active');
+        });
+
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+
+        currentSlide = index;
+    }
+
+
+    function nextSlide() {
+
+        let next = currentSlide + 1;
+
+        if (next >= slides.length) {
+            next = 0;
+        }
+
+        showSlide(next);
+    }
+
+
+    function startSlider() {
+        sliderTimer = setInterval(nextSlide, 5000);
+    }
+
+
+    function restartSlider() {
+        clearInterval(sliderTimer);
+        startSlider();
+    }
+
+
+    dots.forEach((dot, index) => {
+
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            restartSlider();
+        });
+
+    });
+
+
+    startSlider();
+
+
+    /* -------------------------
+       ПОЛЯ ФОРМЫ
+    ------------------------- */
+
+    const inputs = document.querySelectorAll(
+        '.form input, .form textarea, .form select'
+    );
+
+
+    inputs.forEach(input => {
+
+        input.addEventListener('focus', () => {
+            input.closest('.form-row').classList.add('focused');
+        });
+
+
+        input.addEventListener('blur', () => {
+
+            input.closest('.form-row').classList.remove('focused');
+
+            if (input.value.trim() !== '') {
+                input.closest('.form-row').classList.add('filled');
+            } else {
+                input.closest('.form-row').classList.remove('filled');
+            }
+
+        });
+
+    });
+
+
+    /* -------------------------
+       СЧЁТЧИК TEXTAREA
+    ------------------------- */
+
+    const message = document.querySelector('#message');
+    const counter = document.querySelector('#counter');
+
+
+    message.addEventListener('input', () => {
+
+        counter.textContent = message.value.length;
+
+        if (message.value.length > 450) {
+            counter.classList.add('warning');
+        } else {
+            counter.classList.remove('warning');
+        }
+
+    });
+
+
+    /* -------------------------
+       ОТПРАВКА ФОРМЫ
+    ------------------------- */
+
+    const form = document.querySelector('#contactForm');
+    const button = document.querySelector('.submit-button');
+    const buttonText = document.querySelector('.button-text');
+    const successMessage = document.querySelector('.success-message');
+
+
+    form.addEventListener('submit', event => {
+
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.classList.add('shake');
+
+            setTimeout(() => {
+                form.classList.remove('shake');
+            }, 500);
+
+            return;
+        }
+
+
+        button.classList.add('loading');
+
+        buttonText.textContent = 'Отправляем...';
+
+
+        setTimeout(() => {
+
+            button.classList.remove('loading');
+            button.classList.add('success');
+
+            buttonText.textContent = 'Готово ✓';
+
+            successMessage.classList.add('show');
+
+        }, 1200);
+
+    });
+</script>
+
+</body>
+</html>

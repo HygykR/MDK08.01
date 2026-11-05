@@ -1,0 +1,84 @@
+$color-btn-1: #ff5733; 
+$color-btn-2: #33ff57; 
+$color-btn-3: #3357ff; 
+$color-btn-4: #f3ff33; 
+$color-btn-5: #ff33f3; 
+
+%button-template { 
+  background-color: #cccccc; 
+  width: 150px; 
+  height: 50px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(#cccccc, 15%); 
+  }
+} 
+
+@mixin flexible() { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+} 
+
+.buttons-container { 
+  @include flexible(); 
+  gap: 10px; 
+  margin-bottom: 30px; 
+  padding: 20px; 
+  
+  button { 
+    border: 2px solid #333333; 
+  } 
+} 
+
+.btn-1 { 
+  @extend %button-template; 
+  background-color: $color-btn-1; 
+  &:hover { background-color: darken($color-btn-1, 30%); }
+} 
+
+.btn-2 { 
+  @extend %button-template; 
+  background-color: $color-btn-2; 
+  &:hover { background-color: darken($color-btn-2, 30%); }
+} 
+
+.btn-3 { 
+  @extend %button-template; 
+  background-color: $color-btn-3; 
+  &:hover { background-color: darken($color-btn-3, 30%); }
+} 
+
+.btn-4 { 
+  @extend %button-template; 
+  background-color: $color-btn-4; 
+  &:hover { background-color: darken($color-btn-4, 30%); }
+} 
+
+.btn-5 { 
+  @extend %button-template; 
+  background-color: $color-btn-5; 
+  &:hover { background-color: darken($color-btn-5, 30%); }
+} 
+
+.gallery { 
+  @include flexible(); 
+  gap: 20px; 
+  
+  div { 
+    width: 200px; 
+    height: 200px; 
+    background-size: cover; 
+    background-position: center; 
+    border: 1px solid #ddd; 
+  } 
+} 
+
+@for $i from 1 to 4 { 
+  .item-#{$i} { 
+    background-image: url('img/#{$i}.jpg'); 
+  } 
+}

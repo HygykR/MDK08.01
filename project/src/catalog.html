@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>NailArt — каталог</title>
+</head>
+<body>
+
+    //= template/header.html
+
+    <main class="container my-5">
+
+        <h1 class="mb-4">Каталог товаров</h1>
+
+        <!-- Карусель -->
+        <div id="catalogCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+                <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+                <button type="button" data-bs-target="#catalogCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+            </div>
+
+            <div class="carousel-inner rounded overflow-hidden">
+
+                <div class="carousel-item active">
+                    <div class="ratio ratio-16x9">
+                        <img src="img/bara.jpg" class="w-100 h-100 object-fit-cover" alt="Новая коллекция гель-лаков">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <h2>Новая коллекция гель-лаков</h2>
+                        <p>12 трендовых оттенков уже в продаже.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="img/tb.jpg" class="w-100 h-100 object-fit-cover" alt="LED-лампы">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <h2>LED-лампы для маникюра</h2>
+                        <p>Быстрая полимеризация и безопасный свет.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="img/invoker.jpg" class="w-100 h-100 object-fit-cover" alt="Инструменты">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-75 rounded p-3">
+                        <h2>Инструменты премиум-класса</h2>
+                        <p>Медицинская сталь и ручная заточка.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#catalogCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Назад</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#catalogCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Вперёд</span>
+            </button>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <img src="img/bara.jpg" class="w-100 h-100 object-fit-cover" alt="Стартовый набор">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="h5 card-title">Стартовый набор</h2>
+                        <p class="card-text">База, три гель-лака и глянцевый топ.</p>
+                        <p class="fw-bold text-primary">2 490 ₽</p>
+                        <a href="product.html" class="btn btn-outline-dark mt-auto">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <img src="img/tb.jpg" class="w-100 h-100 object-fit-cover" alt="LED-лампа">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="h5 card-title">LED-лампа</h2>
+                        <p class="card-text">48 Вт, таймер и датчик движения.</p>
+                        <p class="fw-bold text-primary">4 790 ₽</p>
+                        <a href="product.html" class="btn btn-outline-dark mt-auto">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <img src="img/visage.jpg" class="w-100 h-100 object-fit-cover" alt="Кусачки">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="h5 card-title">Кусачки для кутикулы</h2>
+                        <p class="card-text">Медицинская сталь и плавный ход.</p>
+                        <p class="fw-bold text-primary">1 890 ₽</p>
+                        <a href="product.html" class="btn btn-outline-dark mt-auto">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <img src="img/invoker.jpg" class="w-100 h-100 object-fit-cover" alt="Кисти">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="h5 card-title">Набор кистей</h2>
+                        <p class="card-text">6 кистей для гель-лака и дизайна.</p>
+                        <p class="fw-bold text-primary">1 450 ₽</p>
+                        <a href="product.html" class="btn btn-outline-dark mt-auto">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <img src="img/bara.jpg" class="w-100 h-100 object-fit-cover" alt="База и топ">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="h5 card-title">База и топ</h2>
+                        <p class="card-text">Каучуковая база и глянцевый топ.</p>
+                        <p class="fw-bold text-primary">1 200 ₽</p>
+                        <a href="product.html" class="btn btn-outline-dark mt-auto">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 overflow-hidden">
+                    <div class="ratio ratio-4x3">
+                        <img src="img/sf.jpg" class="w-100 h-100 object-fit-cover" alt="Пилочки">
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h2 class="h5 card-title">Пилочки и бафы</h2>
+                        <p class="card-text">Набор пилочек разной абразивности.</p>
+                        <p class="fw-bold text-primary">690 ₽</p>
+                        <a href="product.html" class="btn btn-outline-dark mt-auto">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    //= template/footer.html
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

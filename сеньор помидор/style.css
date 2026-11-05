@@ -1,0 +1,1072 @@
+:root {
+    --purple: #635bff;
+    --purple-dark: #5148e5;
+
+    --text: #191b25;
+    --muted: #858998;
+
+    --border: #e4e6ed;
+    --background: #f4f5f9;
+
+    --radius: 22px;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+
+    font-family: "Manrope", Arial, sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(99, 91, 255, 0.12),
+            transparent 30%
+        ),
+        var(--background);
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    min-height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    padding: 50px 25px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.contact-card {
+    width: min(1100px, 100%);
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: var(--radius);
+
+    box-shadow:
+        0 25px 70px rgba(32, 35, 55, 0.12);
+
+    animation: cardAppear 0.8s ease both;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   SLIDER
+========================= */
+
+.slider {
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: #272738;
+}
+
+
+.slide {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s;
+}
+
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.08);
+
+    transition:
+        transform 6s ease;
+}
+
+
+.slide.active img {
+    transform: scale(1);
+}
+
+
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20, 20, 35, 0.05),
+            rgba(20, 20, 35, 0.85)
+        );
+}
+
+
+.slide-content {
+    position: absolute;
+
+    left: 48px;
+    right: 48px;
+    bottom: 90px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+
+.slide-number {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+
+.slide h2 {
+    margin: 0 0 18px;
+
+    font-size: clamp(35px, 4vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+.slide h2 strong {
+    display: block;
+
+    color: #c7c9ff;
+}
+
+
+.slide p {
+    max-width: 390px;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+/* Анимация текста */
+
+.slide.active .slide-number {
+    animation: textUp 0.6s 0.15s ease forwards;
+}
+
+
+.slide.active h2 {
+    animation: textUp 0.7s 0.25s ease forwards;
+}
+
+
+.slide.active p {
+    animation: textUp 0.7s 0.35s ease forwards;
+}
+
+
+@keyframes textUp {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================
+   DOTS
+========================= */
+
+.slider-navigation {
+    position: absolute;
+
+    left: 48px;
+    right: 48px;
+    bottom: 35px;
+
+    z-index: 5;
+}
+
+
+.slider-dots {
+    display: flex;
+    gap: 7px;
+}
+
+
+.dot {
+    width: 22px;
+    height: 4px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+
+.dot.active {
+    width: 42px;
+
+    background: white;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-container {
+    padding: 58px 55px;
+}
+
+
+.form-header {
+    margin-bottom: 40px;
+
+    animation: formHeader 0.7s 0.25s ease both;
+}
+
+
+@keyframes formHeader {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.form-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--purple);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+.form-header h1 {
+    margin: 0 0 10px;
+
+    font-size: 40px;
+    letter-spacing: -1.5px;
+}
+
+
+.form-header p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM ROW
+========================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 145px minmax(0, 1fr);
+
+    gap: 22px;
+
+    align-items: start;
+
+    padding: 22px 0;
+
+    border-top: 1px solid #f0f1f5;
+
+    transition:
+        background 0.25s ease;
+}
+
+
+.form-row:first-child {
+    border-top: 0;
+}
+
+
+.form-row label {
+    padding-top: 14px;
+
+    color: #4e5260;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.form-row label span {
+    color: #df5555;
+}
+
+
+.form-row.focused label {
+    color: var(--purple);
+
+    transform: translateX(3px);
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.input-box {
+    position: relative;
+}
+
+
+.input-box input,
+.input-box textarea,
+.input-box select {
+
+    width: 100%;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fafbfc;
+    color: var(--text);
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.input-box input,
+.input-box select {
+    height: 50px;
+
+    padding: 0 15px;
+}
+
+
+.input-box textarea {
+    min-height: 145px;
+
+    padding: 14px 15px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+.input-box input:hover,
+.input-box textarea:hover,
+.input-box select:hover {
+    border-color: #c9ccd7;
+}
+
+
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box select:focus {
+
+    border-color: var(--purple);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 91, 255, 0.08);
+
+    transform: translateY(-1px);
+}
+
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+    color: #a7abb7;
+
+    transition:
+        opacity 0.25s ease;
+}
+
+
+.input-box input:focus::placeholder,
+.input-box textarea:focus::placeholder {
+    opacity: 0.4;
+}
+
+
+/* =========================
+   INPUT LINE
+========================= */
+
+.input-line {
+    position: absolute;
+
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+
+    height: 2px;
+
+    border-radius: 5px;
+
+    background: var(--purple);
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.input-box input:focus + .input-line {
+    transform: scaleX(1);
+}
+
+
+/* =========================
+   SELECT
+========================= */
+
+.select-box select {
+    appearance: none;
+
+    cursor: pointer;
+}
+
+
+.select-arrow {
+    position: absolute;
+
+    right: 15px;
+    top: 50%;
+
+    color: #888;
+
+    pointer-events: none;
+
+    transform: translateY(-50%);
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.select-box:focus-within .select-arrow {
+    color: var(--purple);
+
+    transform:
+        translateY(-50%)
+        rotate(180deg);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.textarea-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 7px;
+
+    color: #a1a5b0;
+
+    font-size: 10px;
+}
+
+
+.textarea-info b {
+    color: #777;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+
+.textarea-info b.warning {
+    color: #df5555;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.form-footer {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 28px;
+
+    animation: footerAppear 0.7s 0.7s ease both;
+}
+
+
+@keyframes footerAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.required {
+    margin: 0;
+
+    color: #969aa6;
+
+    font-size: 10px;
+}
+
+
+.required span {
+    color: #df5555;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.submit-button {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    min-width: 170px;
+    min-height: 50px;
+
+    padding: 0 16px 0 20px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: var(--purple);
+    color: white;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(99, 91, 255, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.submit-button:hover {
+    background: var(--purple-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(99, 91, 255, 0.3);
+}
+
+
+.submit-button:active {
+    transform: translateY(0) scale(0.98);
+}
+
+
+.button-arrow {
+    display: grid;
+    place-items: center;
+
+    width: 27px;
+    height: 27px;
+
+    margin-left: auto;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    font-size: 16px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.submit-button:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+
+/* Кнопка при отправке */
+
+.submit-button.loading {
+    pointer-events: none;
+
+    background: #888;
+
+    animation: buttonPulse 1s infinite;
+}
+
+
+@keyframes buttonPulse {
+
+    50% {
+        opacity: 0.65;
+    }
+
+}
+
+
+.submit-button.success {
+    background: #28a86b;
+
+    pointer-events: none;
+}
+
+
+.submit-button.success .button-arrow {
+    transform: scale(1.15);
+}
+
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success-message {
+    max-height: 0;
+
+    margin-top: 0;
+
+    overflow: hidden;
+
+    color: #28a86b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.4s ease,
+        margin 0.4s ease,
+        opacity 0.4s ease;
+}
+
+
+.success-message.show {
+    max-height: 40px;
+
+    margin-top: 18px;
+
+    opacity: 1;
+}
+
+
+/* =========================
+   ERROR SHAKE
+========================= */
+
+.form.shake {
+    animation: shake 0.45s ease;
+}
+
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-6px);
+    }
+
+    50% {
+        transform: translateX(6px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .page {
+        padding: 25px 16px;
+    }
+
+
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .slider {
+        min-height: 430px;
+    }
+
+
+    .form-container {
+        padding: 45px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 12px;
+    }
+
+
+    .contact-card {
+        border-radius: 16px;
+    }
+
+
+    .slider {
+        min-height: 430px;
+    }
+
+
+    .slide-content {
+        left: 25px;
+        right: 25px;
+        bottom: 75px;
+    }
+
+
+    .slide h2 {
+        font-size: 34px;
+    }
+
+
+    .slider-navigation {
+        left: 25px;
+        bottom: 25px;
+    }
+
+
+    .form-container {
+        padding: 32px 22px;
+    }
+
+
+    .form-header {
+        margin-bottom: 25px;
+    }
+
+
+    .form-header h1 {
+        font-size: 32px;
+    }
+
+
+    /*
+       На телефоне Grid становится
+       одной колонкой.
+    */
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
+        padding: 18px 0;
+    }
+
+
+    .form-row label {
+        padding-top: 0;
+    }
+
+
+    .form-footer {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .submit-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
+/* ==========================================
+   ПОЯВЛЕНИЕ БУКВ
+========================================== */
+
+.animated-title .letter,
+.animated-text .letter {
+    display: inline-block;
+
+    opacity: 0;
+
+    transform:
+        translateY(45px)
+        rotateX(-90deg)
+        rotateZ(-8deg)
+        scale(0.7);
+
+    transform-origin: bottom center;
+
+    filter: blur(7px);
+}
+
+
+/* Заголовок */
+
+.slide.active .animated-title .letter {
+    animation: crazyLetter 0.75s
+        cubic-bezier(0.16, 1, 0.3, 1)
+        forwards;
+}
+
+
+/* Описание появляется чуть позже */
+
+.slide.active .animated-text .letter {
+    animation: crazyTextLetter 0.45s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+/* Основная анимация буквы */
+
+@keyframes crazyLetter {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(45px)
+            rotateX(-90deg)
+            rotateZ(-8deg)
+            scale(0.7);
+
+        filter: blur(7px);
+    }
+
+    45% {
+        opacity: 1;
+
+        transform:
+            translateY(-9px)
+            rotateX(18deg)
+            rotateZ(3deg)
+            scale(1.08);
+
+        filter: blur(0);
+    }
+
+    70% {
+        transform:
+            translateY(3px)
+            rotateX(-5deg)
+            rotateZ(-1deg)
+            scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotateX(0)
+            rotateZ(0)
+            scale(1);
+
+        filter: blur(0);
+    }
+}
+
+
+/* Текст попроще, но тоже с движением */
+
+@keyframes crazyTextLetter {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(18px)
+            rotateZ(5deg);
+
+        filter: blur(4px);
+    }
+
+    60% {
+        opacity: 1;
+
+        transform:
+            translateY(-3px)
+            rotateZ(-1deg);
+
+        filter: blur(0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            rotateZ(0);
+    }
+}

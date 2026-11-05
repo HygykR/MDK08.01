@@ -1,0 +1,10 @@
+@import url('core.css');
+
+@import url(blocks.css/header.css);
+@import url('blocks.css/button.css');
+@import url('blocks.css/about-us.css');
+@import url('blocks.css/advantages.css');
+@import url('blocks.css/our-project.css');
+@import url('blocks.css/review.css');
+@import url('blocks.css/contact.css');
+@import url('blocks.css/footer.css');

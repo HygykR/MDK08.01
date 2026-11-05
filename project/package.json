@@ -1,0 +1,25 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "start": "gulp",
+    "build": "gulp build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "browser-sync": "^3.0.4",
+    "gulp-rigger": "^0.5.8",
+    "sass": "^1.107.0"
+  }
+}

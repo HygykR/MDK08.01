@@ -1,0 +1,86 @@
+.btn-5, .btn-4, .btn-3, .btn-2, .btn-1 {
+  background-color: #cccccc;
+  width: 150px;
+  height: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-5:hover, .btn-4:hover, .btn-3:hover, .btn-2:hover, .btn-1:hover {
+  background-color: #a6a6a6;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.buttons-container button {
+  border: 2px solid #333333;
+}
+
+.btn-1 {
+  background-color: #ff5733;
+}
+.btn-1:hover {
+  background-color: #991b00;
+}
+
+.btn-2 {
+  background-color: #33ff57;
+}
+.btn-2:hover {
+  background-color: #00991b;
+}
+
+.btn-3 {
+  background-color: #3357ff;
+}
+.btn-3:hover {
+  background-color: #001b99;
+}
+
+.btn-4 {
+  background-color: #f3ff33;
+}
+.btn-4:hover {
+  background-color: #909900;
+}
+
+.btn-5 {
+  background-color: #ff33f3;
+}
+.btn-5:hover {
+  background-color: #990090;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.gallery div {
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ddd;
+}
+
+.item-1 {
+  background-image: url("img/1.jpg");
+}
+
+.item-2 {
+  background-image: url("img/2.jpg");
+}
+
+.item-3 {
+  background-image: url("img/3.jpg");
+}
+
+/*# sourceMappingURL=style.css.map */
